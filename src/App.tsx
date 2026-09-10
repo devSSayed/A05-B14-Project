@@ -2,10 +2,11 @@ import { Suspense } from 'react';
 import HeroSec from './Components/HeroSec';
 import NavBar from './Components/navBar';
 import Technologies from './Components/Technologies/Technologies';
+import type { iTechType } from './Components/Types/TechType';
 
-const TechnologyFetch = async() =>{
-  const ser = await fetch('/data.json')
-  const data = await ser.json()
+const TechnologyFetch = async():Promise<iTechType[]> =>{
+  const res = await fetch('/data.json')
+  const data = await res.json()
   return data;
 }
 
@@ -18,7 +19,7 @@ function App() {
     <NavBar />
     <HeroSec />
 
-    <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
+    <Suspense fallback={<div className='flex justify-center items-center'><span className="loading loading-bars loading-xl"></span></div>}>
       <Technologies TechnologyPromise={TechnologyPromise}/>
     </Suspense>
 

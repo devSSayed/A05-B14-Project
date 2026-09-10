@@ -2,7 +2,7 @@ import MainLogo from '../assets/text-logo.png'
 
 const navBar = () => {
     return (
-        <nav className="border-b border-black/25 sticky">
+        <nav className="border-b border-black/25 sticky top-0 z-50 bg-white/50 backdrop-blur-md shadow-sm">
             <div className="flex justify-between items-center gap-6 py-6 container mx-auto">
                 <img className='w-36' src={MainLogo} alt="Main Logo" />
 
