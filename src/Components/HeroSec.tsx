@@ -2,7 +2,7 @@ import HeroImg from '../assets/banner-stack.png'
 
 const HeroSec = () => {
     return (
-        <section className='mt-6'>
+        <section className='mt-12'>
             <div className='container mx-auto flex justify-between items-center gap-5'>
                 <div className='flex flex-col justify-between gap-12'>
                     <h2 className='font-inter text-7xl font-bold text-[#0F172A]'>Build Your Ideal <br /> <span className='bg-linear-to-r from-orange-500 via-pink-500 to-purple-800 bg-clip-text text-transparent'>Development Stack</span></h2>
