@@ -1,4 +1,4 @@
-import { use } from "react";
+import { use, useState } from "react";
 import type { iTechType } from "../Types/TechType";
 import TechnologyCards from "./TechnologyCards";
 import TechnologyStack from "./TechnologyStack";
@@ -11,6 +11,8 @@ interface iTechnologyProps {
 const Technologies = ({ TechnologyPromise }: iTechnologyProps) => {
 
     const Technologys = use(TechnologyPromise)
+
+    const [selectedToStack, setSelectedToStack] = useState<iTechType[]>([])
 
     return (
 
@@ -25,13 +27,13 @@ const Technologies = ({ TechnologyPromise }: iTechnologyProps) => {
                 <div className=" grid grid-cols-3 gap-9">
                     {
                         Technologys.map((Technology: iTechType) => {
-                            return <TechnologyCards Technologys={Technology} />
+                            return <TechnologyCards key={Technology.key} Technologys={Technology} selectedToStack={selectedToStack} setSelectedToStack={setSelectedToStack} />
                         })
                     }
                 </div>
 
 
-                <TechnologyStack Technologys={Technologys} />
+                <TechnologyStack selectedToStack={selectedToStack} setSelectedToStack={setSelectedToStack} />
             </div>
 
 
