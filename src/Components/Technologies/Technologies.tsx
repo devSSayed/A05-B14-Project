@@ -1,6 +1,7 @@
 import { use } from "react";
 import type { iTechType } from "../Types/TechType";
 import TechnologyCards from "./TechnologyCards";
+import TechnologyStack from "./TechnologyStack";
 
 interface iTechnologyProps {
     TechnologyPromise: Promise<iTechType[]>
@@ -19,8 +20,11 @@ const Technologies = ({ TechnologyPromise }: iTechnologyProps) => {
                 <p className="font-jakarta text-[1.1rem] text-gray-400">Pick one technology per category to build your ideal stack.</p>
             </div>
 
+            <div className="container mx-auto flex justify-evenly gap-10 ">
+                <TechnologyCards Technologys={Technologys} />
+                <TechnologyStack Technologys={Technologys} />
+            </div>
 
-            <TechnologyCards Technologys={Technologys} />
         </div>
     );
 };
