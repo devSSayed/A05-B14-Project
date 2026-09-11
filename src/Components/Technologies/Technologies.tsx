@@ -20,10 +20,21 @@ const Technologies = ({ TechnologyPromise }: iTechnologyProps) => {
                 <p className="font-jakarta text-[1.1rem] text-gray-400">Pick one technology per category to build your ideal stack.</p>
             </div>
 
-            <div className="container mx-auto flex justify-evenly gap-10 items-start ">
-                <TechnologyCards Technologys={Technologys} />
+
+            <div className="container mx-auto flex gap-6">
+                <div className=" grid grid-cols-3 gap-9">
+                    {
+                        Technologys.map((Technology: iTechType) => {
+                            return <TechnologyCards Technologys={Technology} />
+                        })
+                    }
+                </div>
+
+
                 <TechnologyStack Technologys={Technologys} />
             </div>
+
+
 
         </div>
     );
