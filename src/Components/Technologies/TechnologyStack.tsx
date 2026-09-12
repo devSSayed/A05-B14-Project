@@ -5,22 +5,21 @@ import StackCards from "./StackCards";
 interface iTechnoStackProps {
     selectedToStack: iTechType[]
     setSelectedToStack: Dispatch<SetStateAction<iTechType[]>>
+    handleRemoveStackCard: (TechnoCard: iTechType) => void
 }
 
 
 
 
-const TechnologyStack = ({ selectedToStack, setSelectedToStack }: iTechnoStackProps) => {
+const TechnologyStack = ({ selectedToStack, setSelectedToStack, handleRemoveStackCard }: iTechnoStackProps) => {
 
-    
-    
-    const handleRemoveStackCard = (TechnoCard:iTechType) =>{
-        const restStackCards = selectedToStack.filter((selectedCard) => selectedCard.name !== TechnoCard.name)
 
-        setSelectedToStack(restStackCards)
+        const handleAllRemoveStackCards = () =>{
+        
+
+        setSelectedToStack([])
     }
 
-    console.log(selectedToStack);
     return (
         <div className=" flex flex-col gap-3.5 border-gray-400/40 min-h-32 rounded-3xl h-fit min-w-96 mt-7 border-2 p-5">
             <div>
@@ -39,7 +38,7 @@ const TechnologyStack = ({ selectedToStack, setSelectedToStack }: iTechnoStackPr
                             })
                         }
 
-                        <button className="mt-7 font-inter font-bold w-full py-3 border-2 border-[#ED8C85]/60 text-[#D82C20] rounded-xl hover:bg-red-500/90 hover:text-white cursor-pointer">Remove All</button>
+                        <button onClick={() => handleAllRemoveStackCards()} className="mt-7 font-inter font-bold w-full py-3 border-2 border-[#ED8C85]/60 text-[#D82C20] rounded-xl hover:bg-red-500/90 hover:text-white cursor-pointer">Remove All</button>
                         
                     </div>
                     

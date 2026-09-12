@@ -14,6 +14,13 @@ const Technologies = ({ TechnologyPromise }: iTechnologyProps) => {
 
     const [selectedToStack, setSelectedToStack] = useState<iTechType[]>([])
 
+        
+    const handleRemoveStackCard = (TechnoCard:iTechType) =>{
+        const restStackCards = selectedToStack.filter((selectedCard) => selectedCard.name !== TechnoCard.name)
+
+        setSelectedToStack(restStackCards)
+    }
+
     return (
 
         <div className="mt-14">
@@ -27,13 +34,13 @@ const Technologies = ({ TechnologyPromise }: iTechnologyProps) => {
                 <div className=" grid grid-cols-3 gap-9">
                     {
                         Technologys.map((Technology: iTechType) => {
-                            return <TechnologyCards key={Technology.key} Technologys={Technology} selectedToStack={selectedToStack} setSelectedToStack={setSelectedToStack} />
+                            return <TechnologyCards key={Technology.key} Technologys={Technology} selectedToStack={selectedToStack} setSelectedToStack={setSelectedToStack}  />
                         })
                     }
                 </div>
 
 
-                <TechnologyStack selectedToStack={selectedToStack} setSelectedToStack={setSelectedToStack} />
+                <TechnologyStack selectedToStack={selectedToStack} setSelectedToStack={setSelectedToStack} handleRemoveStackCard={handleRemoveStackCard} />
             </div>
 
 

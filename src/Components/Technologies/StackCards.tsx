@@ -8,7 +8,7 @@ interface iStackProps {
     handleRemoveStackCard: (TechnoCard: iTechType) => void
 }
 
-const StackCards = ({ selectedForStack, setSelectedToStack, handleRemoveStackCard }: iStackProps) => {
+const StackCards = ({ selectedForStack, handleRemoveStackCard }: iStackProps) => {
     return (
         <div>
             <div className="w-auto p-4 border-2 border-[#E2E8F0] rounded-2xl mb-2.5">
