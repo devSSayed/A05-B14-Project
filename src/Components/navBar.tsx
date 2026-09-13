@@ -1,12 +1,14 @@
 import MainLogo from '../assets/text-logo.png'
+import hamIcon from '../assets/hamburger.png'
 
 const navBar = () => {
     return (
         <nav className="border-b border-black/25 sticky top-0 z-50 bg-white/50 backdrop-blur-md shadow-sm">
-            <div className="flex justify-between items-center gap-6 py-6 container mx-auto">
+            <div className="flex justify-between items-center gap-6 py-6 sm:px-5 container mx-auto">
+                <img className='md:hidden' src={hamIcon} alt="" />
                 <img className='w-36' src={MainLogo} alt="Main Logo" />
 
-                <ul className="flex justify-between items-center gap-2.5 ">
+                <ul className="hidden md:flex justify-between items-center gap-2.5 ">
                     <li className='font-jakarta text-[#DB2777] font-medium cursor-pointer'>Home</li>
                     <li className='font-jakarta font-medium cursor-pointer hover:text-purple-600'>Technologies</li>
                     <li className='font-jakarta font-medium cursor-pointer hover:text-purple-600'>Projects</li>
