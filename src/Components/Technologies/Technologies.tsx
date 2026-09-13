@@ -23,10 +23,10 @@ const Technologies = ({ TechnologyPromise }: iTechnologyProps) => {
 
     return (
 
-        <div className="mt-14">
-            <div className="container mx-auto">
-                <h2 className="font-inter text-[#0F172A] text-[40px] font-extrabold">Explore the <span className="bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Technologies</span></h2>
-                <p className="font-jakarta text-[1.1rem] text-gray-400">Pick one technology per category to build your ideal stack.</p>
+        <div className="container mx-auto mt-14">
+            <div className=" ml-2 md:ml-0 xl:ml-0">
+                <h2 className="whitespace-nowrap font-inter text-[#0F172A] text-[30px] md:text-[40px] xl:text-[40px] font-extrabold">Explore the <span className="bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Technologies</span></h2>
+                <p className="font-jakarta text-[13px] md:text-[1.1rem] xl:text-[1.1rem] text-gray-400">Pick one technology per category to build your ideal stack.</p>
             </div>
 
 

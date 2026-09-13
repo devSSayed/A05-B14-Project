@@ -3,7 +3,7 @@ import FooterLogo from '../assets/text-logo.png'
 const Footer = () => {
     return (
         <div className='mt-50 border-t-2 border-[#F1F5F9]'>
-            <div className='container mx-auto mt-30 xl:pr-48 flex justify-center xl:justify-between items-center gap-36'>
+            <div className='container mx-auto mt-20 xl:mt-30 xl:pr-48 flex justify-center xl:justify-between items-center gap-36'>
                 <div className='flex flex-col items-center gap-4'>
                     <div className='flex flex-col justify-between items-center xl:items-start'>
                         <img className='w-36' src={FooterLogo} alt="MainLogo" />
@@ -55,12 +55,12 @@ const Footer = () => {
 
             <div className='container mx-auto mt-16 mb-8'>
                 <div className="divider"></div>
-                <div className='flex justify-between items-center sm:px-5 '>
-                    <p className='font-jakarta text-[#94A3B8] text-[14px] xl:text-[15px]'>© 2026 Dev Stack. All rights reserved.</p>
+                <div className='flex justify-between items-center px-6 xl:px-0 '>
+                    <p className='font-jakarta text-[#94A3B8] text-[12px] xl:text-[15px]'>© 2026 Dev Stack. All rights reserved.</p>
 
                     <ul className='flex items-center gap-4'>
-                        <li className='font-jakarta text-[14px] xl:text-[1rem] text-[#94A3B8] hover:text-blue-500 hover:underline cursor-pointer'>Privacy</li>
-                        <li className='font-jakarta text-[14px] xl:text-[1rem] text-[#94A3B8] hover:text-blue-500 hover:underline cursor-pointer'>Terms</li>
+                        <li className='font-jakarta text-[12px] xl:text-[1rem] text-[#94A3B8] hover:text-blue-500 hover:underline cursor-pointer'>Privacy</li>
+                        <li className='font-jakarta text-[12px] xl:text-[1rem] text-[#94A3B8] hover:text-blue-500 hover:underline cursor-pointer'>Terms</li>
                     </ul>
                 </div>
             </div>

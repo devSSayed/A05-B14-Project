@@ -39,8 +39,8 @@ const TechnologyCards = ({ Technologys, selectedToStack, setSelectedToStack, }: 
     }
 
     return (
-        <div className="container mt-7 mx-auto flex  gap-9">
-            <div className="hover-3d cursor-default" key={Technologys.key}>
+        <div className="container mt-7 mx-auto flex gap-9">
+            <div className="hover-3d cursor-default mx-6 md:mx-0 xl:mx-0" key={Technologys.key}>
                 <div className={`${isMarked ? "border-2 border-[#DB2777]/50 min-h-44 rounded-3xl p-5 flex flex-col " : "border-2 border-gray-400/40 min-h-44 rounded-3xl p-5 flex flex-col "} ${selectedToStack.length === 0 ? "border-2 border-gray-400/40 min-h-44 rounded-3xl p-5 flex flex-col" : ""}`}>
                     <div className="flex justify-between items-center">
                         <img className="w-10" src={Technologys.icon} alt="icon" />

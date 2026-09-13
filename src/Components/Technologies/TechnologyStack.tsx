@@ -21,7 +21,7 @@ const TechnologyStack = ({ selectedToStack, setSelectedToStack, handleRemoveStac
     }
 
     return (
-        <div className=" flex flex-col gap-3.5 border-gray-400/40 min-h-32 rounded-3xl h-fit w-full shrink-0 mt-7 border-2 p-5">
+        <div className=" flex flex-col gap-3.5 border-gray-400/40 min-h-32 rounded-3xl h-fit  shrink-0 mt-7 border-2 p-5 mx-3 md:mx-0 xl:mx-0">
             <div>
                 <h2 className="text-[#0F172A] font-jakarta font-bold text-2xl mb-1.5">Your Stack</h2>
                 <p className="font-jakarta font-light text-[#64748B]">{selectedToStack.length === 0 ? "No technologies selected yet." : `${selectedToStack.length} Technology Selected`}</p>
